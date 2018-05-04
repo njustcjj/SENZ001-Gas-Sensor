@@ -1,1 +1,8 @@
-
+# SENZ001 Gas Sensor###### Translation> For `English`, please click [`here.`](https://github.com/njustcjj/SENZ001-Gas-Sensor/blob/master/README.md)> For `Chinese`, please click [`here.`](https://github.com/njustcjj/SENZ001-Gas-Sensor/blob/master/README_CN.md)![](https://github.com/njustcjj/SENZ001-Gas-Sensor/blob/master/pic/SENZ001_front.jpg "SENZ001_Front") ![](https://github.com/njustcjj/SENZ001-Gas-Sensor/blob/master/pic/SENZ001_back.jpg "SENZ001_Back") ### Introduction> The gas sensor detects Hydrogen gases. It is able to give alarms when the smoke/gas leaks. You can adjust the sensitivity with the potentiometer.
+> > This sensor will return an analog value which represents the intensity of the gas being detected.
+> 
+> This sensor will also return a digital value(0 or 1) from TTL pin. The output will be "0" when gas's potency is above certain value.### Specification* Dector：QM-N10* Voltage for working( VH )：5±0.2V ( AC or DC ) * Current: 150mA* Sensitivity：≥5* Size:32*20*22mm
+* Temperature:-15~40℃  ( 5~104℉ )
+* Humidity:20～85%RH
+
+> *Tip*: When the element connects to the source, it needs about *1 min* to get pre-heated before use.### Tutorial####Pin Definition> AO-Analog output> > DO-Digital output (TTL: 0 | 1)> > GND>> VCC#### Connection DiagramWith analog output as a sample:![](https://github.com/njustcjj/SENZ001-Gas-Sensor/blob/master/pic/SENZ001_connect.png "连线图") #### Sample Code    void setup()     {       Serial.begin(9600); // 9600 bps    }    void loop()     {      int val;      val=analogRead(0);      Serial.println(val ,DEC);// val信息加载在Serial中传输      delay(100);    }### Go Shopping [*SENZ001 Gas Sensor*](http://www.ebay.com/).
